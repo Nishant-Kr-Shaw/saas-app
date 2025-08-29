@@ -13,9 +13,9 @@ interface CompanionListProps {
 const CompanionsList = ({title, companions, classNames}: CompanionListProps) => {
   return (
     <article className={cn('companion-list', classNames)}>
-      <h2 className="font-bold text-3xl">Recent Sessions</h2>
+      <h2 className="font-bold text-3xl">{title}</h2>
 
-      <Table>
+  <Table>
   <TableHeader>
     <TableRow>
       <TableHead className="text-lg w-2/3">Lessons</TableHead>
@@ -24,8 +24,8 @@ const CompanionsList = ({title, companions, classNames}: CompanionListProps) => 
     </TableRow>
   </TableHeader>
   <TableBody>
-    {companions?.map(({id, subject, name, topic, duration}) => (
-      <TableRow key={id}>
+   {companions?.filter(Boolean).map(({ id, subject, name, topic, duration }, index) => (
+  <TableRow key={id + "-" + index}>
         <TableCell>
           <Link href={`/companions/${id}`}> 
         <div className="flex items-center gap-2">
