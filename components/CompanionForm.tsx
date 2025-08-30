@@ -25,7 +25,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { subjects } from "@/constants";
 import { Textarea } from "./ui/textarea";
-import { createCompanion } from "@/lib/actions/companions.actions";
+import { createCompanion } from "@/lib/actions/companions.dynamic";
 import { redirect } from "next/navigation";
 
 const formSchema = z.object({

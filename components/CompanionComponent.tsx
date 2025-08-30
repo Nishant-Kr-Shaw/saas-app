@@ -8,7 +8,7 @@ import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 import { LottieRefCurrentProps } from 'lottie-react'
 import soundwaves from '@/constants/soundwaves.json'
-import { addToSessionHistory } from '@/lib/actions/companions.actions'
+import { addToSessionHistory } from '@/lib/actions/companions.dynamic'
 
 enum CallStatus {
     INACTIVE = 'INACTIVE',
